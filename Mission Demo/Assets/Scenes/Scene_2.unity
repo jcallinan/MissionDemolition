@@ -187,6 +187,7 @@ MonoBehaviour:
   launchPoint: {fileID: 0}
   projectilePrefab: {fileID: 2517552931565699765, guid: f9a2fc913961ffd4487ccc579f175c4b, type: 3}
   velocityMult: 10
+  projLinePrefab: {fileID: 2067047301310189291, guid: 5694471a420dde74f859ce3da4b0ef38, type: 3}
   launchPos: {x: 0, y: 0, z: 0}
   projectile: {fileID: 0}
   aimingMode: 0

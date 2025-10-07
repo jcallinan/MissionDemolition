@@ -7,6 +7,7 @@ public class Slingshot : MonoBehaviour
     public GameObject launchPoint;
     public GameObject projectilePrefab;
     public float velocityMult = 10f;
+    public GameObject projLinePrefab;
 
     // fields set dynamically
     [Header("Set Dynamically")]
@@ -73,6 +74,7 @@ public class Slingshot : MonoBehaviour
             projRB.isKinematic = false;
             projRB.velocity = -mouseDelta * velocityMult;
             FollowCam.POI = projectile;
+            Instantiate<GameObject>(projLinePrefab, projectile.transform);
             projectile = null;
         }
     }
