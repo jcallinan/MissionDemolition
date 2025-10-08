@@ -75,6 +75,23 @@ public class MissionDemolition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateGUI();
+        //check for level end
+        if ((mode == GameMode.playing) && (Goal.goalMet))
+        {
+            mode = GameMode.levelEnd;
+            Invoke("NextLevel", 2f);
+        }
+    }
+    void NextLevel()
+    {
+        level++;
+        if (level == levelMax)
+        {
+            level = 0;
+            shotsTaken = 0;
+        }
+        StartLevel();
+
     }
 }
